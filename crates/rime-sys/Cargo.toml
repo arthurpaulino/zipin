@@ -1,0 +1,10 @@
+[package]
+name = "rime-sys"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+description = "Static-link bindings to librime (rime/librime)."
+links = "rime"
+
+[build-dependencies]
+bindgen = "0.72"

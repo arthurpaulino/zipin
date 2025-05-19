@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install librime build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          cmake ninja-build pkg-config libunwind-dev \
+          libboost-locale-dev libboost-regex-dev \
+          libgoogle-glog-dev libleveldb-dev libmarisa-dev \
+          libyaml-cpp-dev libopencc-dev libgtest-dev
+
+    - name: Install Rust components
+      run: |
+        rustup update
+        rustup component add rustfmt clippy
+
+    - name: Check formatting
+      run: cargo fmt --check
+
+    - name: Run clippy
+      run: cargo clippy
+
+    - name: Run tests
+      run: cargo test

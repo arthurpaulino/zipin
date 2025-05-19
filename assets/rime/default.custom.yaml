@@ -1,0 +1,7 @@
+# zipin v2 patches on top of librime/data/minimal/default.yaml.
+# Restricts the schema list to luna_pinyin (cangjie5 stays available via
+# user override).
+
+patch:
+  schema_list:
+    - schema: luna_pinyin

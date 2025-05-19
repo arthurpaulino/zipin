@@ -1,0 +1,14 @@
+[package]
+name = "zipin"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+anyhow = "1"
+arboard = "3"
+dirs = "5"
+include_dir = "0.7"
+ratatui = "0.30"
+rime-sys = { path = "../rime-sys" }
+unicode-width = "0.2"

@@ -1,0 +1,23 @@
+zipin
+Copyright (c) 2026 Arthur Paulino
+
+This product statically links and/or embeds:
+
+  - librime (BSD-3-Clause) — https://github.com/rime/librime
+  - LevelDB (BSD-3-Clause) — https://github.com/google/leveldb
+  - yaml-cpp (MIT)        — https://github.com/jbeder/yaml-cpp
+  - marisa-trie (BSD-2-Clause) — https://github.com/s-yata/marisa-trie
+  - OpenCC (Apache-2.0)   — https://github.com/BYVoid/OpenCC
+  - Boost.Regex (BSL-1.0; Linux only) — https://www.boost.org/
+
+Plus the BSD-3-Clause-licensed Rime data shipped as part of librime
+(see `assets/rime/LICENSE-librime`).
+
+Full license texts and attribution are in `LICENSE-THIRD-PARTY.md`,
+also accessible at runtime via `zipin --licenses`.
+
+This file is reserved for upstream `NOTICE` text required by Apache-2.0
+§4(d). None of the Apache-2.0 dependencies (currently only OpenCC) ship
+a separate `NOTICE` file at the pinned version, so no upstream notices
+are reproduced here. If a future upstream adds one, it must be appended
+verbatim below.
